@@ -2,6 +2,22 @@ import React, { Component } from "react";
 import axios from "axios";
 
 export default class PlantList extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      plants: [],
+    };
+    console.log(this.state.plants);
+  }
+  // when the component mounts:
+  componentDidMount() {
+    axios
+      .get(`http://localhost:3333/plants`)
+
+      .then((data) => this.setState({ plants: data.data.plantsData }))
+      .catch((err) => console.log("Naw girl", err));
+  }
   // add state with a property called "plants" - initialize as an empty array
 
   // when the component mounts:
@@ -9,6 +25,9 @@ export default class PlantList extends Component {
   //   - set the returned plants array to this.state.plants
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
+
+  
+
   render() {
     return (
       <main className="plant-list">
