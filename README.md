@@ -30,13 +30,30 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+
 2. Describe the different phases of the component lifecycle.
+
+-Mounting > constructor: initialize your state, setting the default values.
+
+-Render > Rendering does all the work. It returns the JSX of your actual component. Returning component JSX
+
+-componentDidMount > After we’ve rendered our component for the first time, this method is called. If you need to load data, here’s where you do it. Don’t try to load data in the constructor or render or anything crazy
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+Every component in React goes through a lifecycle of events. I like to think of them as going through a cycle of birth, growth, and death.
+
+Mounting – Birth of your component
+Update – Growth of your component
+Unmount – Death of your component
+
 4. Define stateful logic.
 
+Stateful logic is any code that uses state, but in the case of hooks I would define it as a behaviour created with the use of one or more hooks. It's like a perk that you're adding to a component. A perk is a good example because it tells you that its value is specific to that component, but more than one component can have that perk, that's why it's called reusable.
+
 5. Describe how to test a React component with React Testing Library.
+
+Automated testing minimizes the risk of bugs finding their way into production code. Testing is NOT optional. Testing should be a part of every developer’s workflow. A feature is not done until it is fully tested! In direct contrast to manual testing, automated testing significantly reduces the manpower and margin for error needed to confidently ship a product. Though it can’t entirely remove manual testing from the process, it certainly helps.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
